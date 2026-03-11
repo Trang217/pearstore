@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Head from "./head";
 import Link from "next/link";
-import Cart from "@/components/Cart";
 import EmailInput from "@/components/EmailInput";
+import NavBar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,18 +33,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div id="portal" />
-        <div id="root">
-          <header>
-            <div className="header-content">
-              <Link href="/">
-                <h1>Pearstore</h1>
-              </Link>
-              <h5 className="mid-text">--Freshfruits for everyone--</h5>
-
-              <Cart />
-            </div>
-          </header>
-          <main>{children}</main>
+        <div id="root" className="bg-amber-50">
+          <NavBar />
+          <main className="min-h-screen">{children}</main>
           <div className="hr" />
           <footer>
             <div className="email">
@@ -60,11 +51,19 @@ export default function RootLayout({
 
               <div className="">
                 <h3>Support</h3>
-                <Link href="/">Contact</Link>
-                <Link href="/">FAQ</Link>
+                <Link href="/contact">Contact</Link>
+                <Link href="/faq">FAQ</Link>
               </div>
             </div>
-            <div className="socials"></div>
+            <div className="socials">
+              <p>
+                Coppy right{" "}
+                <a href="https://animated-portfolio-two-chi.vercel.app/">
+                  Jenny Nguyen
+                </a>{" "}
+                2026
+              </p>
+            </div>
           </footer>
         </div>
       </body>
