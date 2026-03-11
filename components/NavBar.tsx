@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Cart from "./Cart";
+import Logo from "./Logo";
 
 const links = [
   { url: "/", title: "Home" },
@@ -9,11 +10,9 @@ const links = [
 ];
 export default function NavBar() {
   return (
-    <nav className="flex flex-row justify-between items-center p-6 font-bold text-green-900">
+    <nav className="flex flex-row justify-between items-center p-6 font-bold text-green-950">
       <div>
-        <Link href="/">
-          <h1 className="uppercase text-2xl">Pearstore 🍐</h1>
-        </Link>
+        <Logo />
       </div>
       <div className="flex flex-row justify-evenly items-center flex-1 text-xl">
         {links.map((link) => (
