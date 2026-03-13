@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="links flex flex-row justify-around ">
         <div className="w-1/3">
           <Logo />
-          <p className="text-justify">
+          <p className="text-justify mt-2">
             At PEARSTORE we source freshly picked and nutrient dense, organic
             fruit from trusted growers. Fruits that bring sunshine and health
             into your life ☀
